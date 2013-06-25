@@ -1,0 +1,598 @@
+<script> 
+    $(document).ready(function() {
+ 
+            $('#number_input').change(function() {
+                $('.rosterlist').hide(0);
+                $('.' + $('#number_input').val()).show(0);
+            });
+        
+        //ROSTER BUTTONS
+            $('#number_input').on( 'tap', moveaction );
+            function moveaction( event ) {
+                $('#actionbar').animate({ marginLeft: '-30px'}, 5);
+            }
+
+    });
+        
+    </script>
+
+
+<!-- Number Lookup-->
+<div class="rosterlist2" style="margin-top:64px;" id="number_lookup_btn">
+    <div class="p_name" style="text-align:center; letter-spacing:2px;">Number Lookup <i class="icon-search"></i></div>
+</div>
+
+
+<div class="rosterlist2">
+    <input type="text" id="number_input" style="width:100%;" placeholder="Tap to type" />
+</div>
+
+<!--ROSTER STARTS HERE-->
+
+
+<div class="rosterlist">
+    <div class="p_name">## <span class="light_text2">/ Last, First</span></div>
+    <div class="roster_line_2"><div class="p_pos">position</div><div class="p_height">height</div><div class="p_grade">age</div><div class="p_weight">Weight</div></div>
+</div>
+
+<div class="rosterlist 04" id="04">
+    <div class="p_name">04 <span class="light_text2">/ Abbrederis, Jared</span></div>
+    <div class="roster_line_2"><div class="p_pos">WR</div><div class="p_height">6'2''</div><div class="p_grade">SR</div><div class="p_weight">188</div></div>
+</div>
+
+<div class="rosterlist 99" id="99">
+    <div class="p_name">99 <span class="light_text2">/ Adeyanu, James</span></div>
+    <div class="roster_line_2"><div class="p_pos">DL</div><div class="p_height">6'2''</div><div class="p_grade">SO</div><div class="p_weight">259</div></div>
+</div>
+
+<div class="rosterlist 96"  id="96">
+    <div class="p_name">96 <span class="light_text2">/ Allen, Beau</span></div>
+    <div class="roster_line_2"><div class="p_pos">DL</div><div class="p_height">6'3''</div><div class="p_grade">sr</div><div class="p_weight">333</div></div>
+</div>
+
+<div class="rosterlist 36" id="36">
+    <div class="p_name">36 <span class="light_text2">/ Armstrong, Ethan</span></div>
+    <div class="roster_line_2"><div class="p_pos">LB</div><div class="p_height">6'2''</div><div class="p_grade">sr</div><div class="p_weight">216</div></div>
+</div>
+
+<div class="rosterlist 15" id="15">
+    <div class="p_name">15 <span class="light_text2">/ Armstrong, Thad</span></div>
+    <div class="roster_line_2"><div class="p_pos">QB</div><div class="p_height">6'5''</div><div class="p_grade">fr</div><div class="p_weight">189</div></div>
+</div>
+
+<div class="rosterlist 49"  id="49">
+    <div class="p_name">49 <span class="light_text2">/ Arneson, Sam</span></div>
+    <div class="roster_line_2"><div class="p_pos">TE</div><div class="p_height">6'4''</div><div class="p_grade">jr</div><div class="p_weight">255</div></div>
+</div>
+
+<div class="rosterlist 07" id="07">
+    <div class="p_name">07 <span class="light_text2">/ Arnold, Brett</span></div>
+    <div class="roster_line_2"><div class="p_pos">WR</div><div class="p_height">5'11''</div><div class="p_grade">sr</div><div class="p_weight">181</div></div>
+</div>
+
+
+
+<!--+5-->
+
+<div class="rosterlist 71" id="71">
+    <div class="p_name">71 <span class="light_text2">/ Ball, Ray</span></div>
+    <div class="roster_line_2"><div class="p_pos">ol</div><div class="p_height">6'7''</div><div class="p_grade">so</div><div class="p_weight">327</div></div>
+</div>
+
+<div class="rosterlist 18" id="18">
+    <div class="p_name">18 <span class="light_text2">/ Barentz, Lance</span></div>
+    <div class="roster_line_2"><div class="p_pos">wr</div><div class="p_height">5'11''</div><div class="p_grade">so</div><div class="p_weight">196</div></div>
+</div>
+
+<div class="rosterlist 47" id="47">
+    <div class="p_name">47 <span class="light_text2">/ Biegel, Vince</span></div>
+    <div class="roster_line_2"><div class="p_pos">lb</div><div class="p_height">6'3''</div><div class="p_grade">fr</div><div class="p_weight">230</div></div>
+</div>
+
+<div class="rosterlist 44"  id="44">
+    <div class="p_name">44 <span class="light_text2">/ Borland, Chris</span></div>
+    <div class="roster_line_2"><div class="p_pos">lb</div><div class="p_height">5'11''</div><div class="p_grade">sr</div><div class="p_weight">248</div></div>
+</div>
+
+<div class="rosterlist 24" id="24">
+    <div class="p_name">24 <span class="light_text2">/ Brookins, Keelon</span></div>
+    <div class="roster_line_2"><div class="p_pos">db</div><div class="p_height">5'11''</div><div class="p_grade">fr</div><div class="p_weight">201</div></div>
+</div>
+
+
+
+<!--+5-->
+
+<div class="rosterlist 17" id="17">
+    <div class="p_name">17 <span class="light_text2">/ Cadogan, Sherard</span></div>
+    <div class="roster_line_2"><div class="p_pos">lb</div><div class="p_height">6'3''</div><div class="p_grade">jr</div><div class="p_weight">233</div></div>
+</div>
+
+<div class="rosterlist 07" id="07">
+    <div class="p_name">07 <span class="light_text2">/ Caputo, Michael</span></div>
+    <div class="roster_line_2"><div class="p_pos">db</div><div class="p_height">6'1''</div><div class="p_grade">so</div><div class="p_weight">198</div></div>
+</div>
+
+<div class="rosterlist 54" id="54">
+    <div class="p_name">54 <span class="light_text2">/ Costigan, Kyle</span></div>
+    <div class="roster_line_2"><div class="p_pos">ol</div><div class="p_height">6'4''</div><div class="p_grade">jr</div><div class="p_weight">304</div></div>
+</div>
+
+<div class="rosterlist 31" id="31">
+    <div class="p_name">31 <span class="light_text2">/ Cummins, Connor</span></div>
+    <div class="roster_line_2"><div class="p_pos">wr</div><div class="p_height">6'1''</div><div class="p_grade">jr</div><div class="p_weight">192</div></div>
+</div>
+
+<div class="rosterlist 81" id="81">
+    <div class="p_name">81 <span class="light_text2">/ D<small>e</small>Cicco, Brock</span></div>
+    <div class="roster_line_2"><div class="p_pos">te</div><div class="p_height">6'5''</div><div class="p_grade">sr</div><div class="p_weight">250</div></div>
+</div>
+
+
+
+<!--+5-->
+
+<div class="rosterlist 55 " id="55">
+    <div class="p_name">55 <span class="light_text2">/ Denlinger, trent</span></div>
+    <div class="roster_line_2"><div class="p_pos">ol</div><div class="p_height">6'6''</div><div class="p_grade">fr</div><div class="p_weight">285</div></div>
+</div>
+
+<div class="rosterlist 51" id="51">
+    <div class="p_name">51 <span class="light_text2">/ dippel, Tyler</span></div>
+    <div class="roster_line_2"><div class="p_pos">dl</div><div class="p_height">6'4''</div><div class="p_grade">sr</div><div class="p_weight">267</div></div>
+</div>
+
+<div class="rosterlist 03" id="03">
+    <div class="p_name">03 <span class="light_text2">/ doe, kenzel</span></div>
+    <div class="roster_line_2"><div class="p_pos">wr</div><div class="p_height">5'8''</div><div class="p_grade">jr</div><div class="p_weight">171</div></div>
+</div>
+
+<div class="rosterlist 15" id="15">
+    <div class="p_name">15 <span class="light_text2">/ duckworth, jeff</span></div>
+    <div class="roster_line_2"><div class="p_pos">wr</div><div class="p_height">6'0''</div><div class="p_grade">sr</div><div class="p_weight">206</div></div>
+</div>
+
+<div class="rosterlist 85" id="85">
+    <div class="p_name">85 <span class="light_text2">/ erickson, alex</span></div>
+    <div class="roster_line_2"><div class="p_pos">wr</div><div class="p_height">6'0''</div><div class="p_grade">fr</div><div class="p_weight">197</div></div>
+</div>
+
+
+
+<!--+5-->
+
+<div class="rosterlist 31" id="31">
+    <div class="p_name">31 <span class="light_text2">/ Etienne, Hugs</span></div>
+    <div class="roster_line_2"><div class="p_pos">db</div><div class="p_height">5'11''</div><div class="p_grade">fr</div><div class="p_weight">175</div></div>
+</div>
+
+<div class="rosterlist 29" id="29">
+    <div class="p_name">29 <span class="light_text2">/ floyd, terrance</span></div>
+    <div class="roster_line_2"><div class="p_pos">db</div><div class="p_height">5'10''</div><div class="p_grade">so</div><div class="p_weight">197</div></div>
+</div>
+
+<div class="rosterlist 009" id="09">
+    <div class="p_name">09 <span class="light_text2">/ fredrick, jordan</span></div>
+    <div class="roster_line_2"><div class="p_pos">wr</div><div class="p_height">6'3''</div><div class="p_grade">so</div><div class="p_weight">210</div></div>
+</div>
+
+<div class="rosterlist 94" id="94">
+    <div class="p_name">94 <span class="light_text2">/ french, kyle</span></div>
+    <div class="roster_line_2"><div class="p_pos">k</div><div class="p_height">6'1''</div><div class="p_grade">jr</div><div class="p_weight">199</div></div>
+</div>
+
+<div class="rosterlist 32" id="32">
+    <div class="p_name">32 <span class="light_text2">/ gaulden, devin</span></div>
+    <div class="roster_line_2"><div class="p_pos">db</div><div class="p_height">5'10''</div><div class="p_grade">jr</div><div class="p_weight">186</div></div>
+</div>
+
+
+
+<!--+5-->
+
+<div class="rosterlist 77" id="77">
+    <div class="p_name">77 <span class="light_text2">/ Gilbert, Bryce</span></div>
+    <div class="roster_line_2"><div class="p_pos">dl</div><div class="p_height">6'1''</div><div class="p_grade">jr</div><div class="p_weight">307</div></div>
+</div>
+
+<div class="rosterlist 95" id="95">
+    <div class="p_name">95 <span class="light_text2">/ Goldberg, arthur</span></div>
+    <div class="roster_line_2"><div class="p_pos">dl</div><div class="p_height">6'3''</div><div class="p_grade">fr</div><div class="p_weight">282</div></div>
+</div>
+
+<div class="rosterlist 25" id="25">
+    <div class="p_name">25 <span class="light_text2">/ gordon, melvin</span></div>
+    <div class="roster_line_2"><div class="p_pos">rb</div><div class="p_height">6'1''</div><div class="p_grade">so</div><div class="p_weight">203</div></div>
+</div>
+
+<div class="rosterlist 79" id="79">
+    <div class="p_name">79 <span class="light_text2">/ groy, ryan</span></div>
+    <div class="roster_line_2"><div class="p_pos">ol</div><div class="p_height">6'5''</div><div class="p_grade">sr</div><div class="p_weight">317</div></div>
+</div>
+
+<div class="rosterlist 14" id="14">
+    <div class="p_name">14 <span class="light_text2">/ hammon, nate</span></div>
+    <div class="roster_line_2"><div class="p_pos">db</div><div class="p_height">6'1''</div><div class="p_grade">fr</div><div class="p_weight">203</div></div>
+</div>
+
+
+
+<!--+5-->
+
+<div class="rosterlist 89" id="89">
+    <div class="p_name">89 <span class="light_text2">/ hammond, chase</span></div>
+    <div class="roster_line_2"><div class="p_pos">wr</div><div class="p_height">6'5''</div><div class="p_grade">jr</div><div class="p_weight">209</div></div>
+</div>
+
+<div class="rosterlist 50" id="50">
+    <div class="p_name">50 <span class="light_text2">/ harrison, josh</span></div>
+    <div class="roster_line_2"><div class="p_pos">dl</div><div class="p_height">6'0''</div><div class="p_grade">jr</div><div class="p_weight">231</div></div>
+</div>
+
+<div class="rosterlist 78" id="78">
+    <div class="p_name">78 <span class="light_text2">/ havenstein, rob</span></div>
+    <div class="roster_line_2"><div class="p_pos">ol</div><div class="p_height">6'8''</div><div class="p_grade">jr</div><div class="p_weight">338</div></div>
+</div>
+
+<div class="rosterlist 41" id="41">
+    <div class="p_name">41 <span class="light_text2">/ hayes, jesse</span></div>
+    <div class="roster_line_2"><div class="p_pos">dl</div><div class="p_height">6'3''</div><div class="p_grade">so</div><div class="p_weight">238</div></div>
+</div>
+
+<div class="rosterlist 87" id="87">
+    <div class="p_name">87 <span class="light_text2">/ hemer, ethan</span></div>
+    <div class="roster_line_2"><div class="p_pos">dl</div><div class="p_height">6'6''</div><div class="p_grade">sr</div><div class="p_weight">296</div></div>
+</div>
+
+
+
+<!--+5-->
+
+<div class="rosterlist 45" id="45">
+    <div class="p_name">45 <span class="light_text2">/ herring, warren</span></div>
+    <div class="roster_line_2"><div class="p_pos">dl</div><div class="p_height">6'3''</div><div class="p_grade">jr</div><div class="p_weight">286</div></div>
+</div>
+
+<div class="rosterlist 52" id="52">
+    <div class="p_name">52 <span class="light_text2">/ hill, nick</span></div>
+    <div class="roster_line_2"><div class="p_pos">lb</div><div class="p_height">6'2''</div><div class="p_grade">sr</div><div class="p_weight">222</div></div>
+</div>
+
+<div class="rosterlist 05" id="05">
+    <div class="p_name">05 <span class="light_text2">/ hillary, darius</span></div>
+    <div class="roster_line_2"><div class="p_pos">db</div><div class="p_height">5'11''</div><div class="p_grade">so</div><div class="p_weight">187</div></div>
+</div>
+
+<div class="rosterlist 13">
+    <div class="p_name">13 <span class="light_text2">/ houston, bart</span></div>
+    <div class="roster_line_2"><div class="p_pos">qb</div><div class="p_height">6'4''</div><div class="p_grade">fr</div><div class="p_weight">219</div></div>
+</div>
+
+<div class="rosterlist 23" id="23">
+    <div class="p_name">23 <span class="light_text2">/ javkson, vonte</span></div>
+    <div class="roster_line_2"><div class="p_pos">rb</div><div class="p_height">6'0''</div><div class="p_grade">fr</div><div class="p_weight">199</div></div>
+</div>
+
+
+
+<!--+5-->
+
+<div class="rosterlist 21" id="21">
+    <div class="p_name">21 <span class="light_text2">/ jean, peniel</span></div>
+    <div class="roster_line_2"><div class="p_pos">db</div><div class="p_height">5'11''</div><div class="p_grade">jr</div><div class="p_weight">188</div></div>
+</div>
+
+<div class="rosterlist 01" id="01">
+    <div class="p_name">01 <span class="light_text2">/ jordan, A.j.</span></div>
+    <div class="roster_line_2"><div class="p_pos">wr</div><div class="p_height">6'0''</div><div class="p_grade">so</div><div class="p_weight">180</div></div>
+</div>
+
+<div class="rosterlist 93" id="93">
+    <div class="p_name">93 <span class="light_text2">/ keefer, jake</span></div>
+    <div class="roster_line_2"><div class="p_pos">dl</div><div class="p_height">6'3''</div><div class="p_grade">so</div><div class="p_weight">254</div></div>
+</div>
+
+<div class="rosterlist 97" id="97">
+    <div class="p_name">97 <span class="light_text2">/ kelly, brendan</span></div>
+    <div class="roster_line_2"><div class="p_pos">dl</div><div class="p_height">6'6''</div><div class="p_grade">sr</div><div class="p_weight">250</div></div>
+</div>
+
+<div class="rosterlist 11" id="11">
+    <div class="p_name">11 <span class="light_text2">/ knox, chase</span></div>
+    <div class="roster_line_2"><div class="p_pos">qb</div><div class="p_height">6'1''</div><div class="p_grade">fr</div><div class="p_weight">196</div></div>
+</div>
+
+
+
+<!--+5-->
+
+<div class="rosterlist 56" id="56">
+    <div class="p_name">56 <span class="light_text2">/ kodanko, riki</span></div>
+    <div class="roster_line_2"><div class="p_pos">ol</div><div class="p_height">6'9''</div><div class="p_grade">jr</div><div class="p_weight">332</div></div>
+</div>
+
+<div class="rosterlist 30" id="30">
+    <div class="p_name">30 <span class="light_text2">/ landisch, derek</span></div>
+    <div class="roster_line_2"><div class="p_pos">lb</div><div class="p_height">5'11''</div><div class="p_grade">jr</div><div class="p_weight">227</div></div>
+</div>
+
+<div class="rosterlist 73" id="73">
+    <div class="p_name">73 <span class="light_text2">/ lewallen, dallas</span></div>
+    <div class="roster_line_2"><div class="p_pos">ol</div><div class="p_height">6'6''</div><div class="p_grade">jr</div><div class="p_weight">318</div></div>
+</div>
+
+<div class="rosterlist 22" id="22">
+    <div class="p_name">22 <span class="light_text2">/ lewis, jeffrey</span></div>
+    <div class="roster_line_2"><div class="p_pos">rb</div><div class="p_height">6'2''</div><div class="p_grade">jr</div><div class="p_weight">211</div></div>
+</div>
+
+<div class="rosterlist 16" id="16">
+    <div class="p_name">16 <span class="light_text2">/ love, reggie</span></div>
+    <div class="roster_line_2"><div class="p_pos">wr</div><div class="p_height">6'3''</div><div class="p_grade">so</div><div class="p_weight">209</div></div>
+</div>
+
+
+
+<!--+5-->
+
+<div class="rosterlist 37" id="37">
+    <div class="p_name">37 <span class="light_text2">/ m<small>ac</small>cudden, kevin</span></div>
+    <div class="roster_line_2"><div class="p_pos">fb</div><div class="p_height">5'11''</div><div class="p_grade">jr</div><div class="p_weight">225</div></div>
+</div>
+
+<div class="rosterlist 84" id="84">
+    <div class="p_name">84 <span class="light_text2">/ maly, austin</span></div>
+    <div class="roster_line_2"><div class="p_pos">te</div><div class="p_height">6'5''</div><div class="p_grade">so</div><div class="p_weight">239</div></div>
+</div>
+
+<div class="rosterlist 61" id="61">
+    <div class="p_name">61 <span class="light_text2">/ marz, tyler</span></div>
+    <div class="roster_line_2"><div class="p_pos">ol</div><div class="p_height">6'7''</div><div class="p_grade">so</div><div class="p_weight">318</div></div>
+</div>
+
+<div class="rosterlist 87" id="87">
+    <div class="p_name">87 <span class="light_text2">/ mason, marquis</span></div>
+    <div class="roster_line_2"><div class="p_pos">wr</div><div class="p_height">6'4''</div><div class="p_grade">jr</div><div class="p_weight">228</div></div>
+</div>
+
+<div class="rosterlist 75" id="75">
+    <div class="p_name">75 <span class="light_text2">/ matthias, zac</span></div>
+    <div class="roster_line_2"><div class="p_pos">ol</div><div class="p_height">6'5''</div><div class="p_grade">sr</div><div class="p_weight">323</div></div>
+</div>
+
+
+
+<!--+5-->
+
+<div class="rosterlist 56" id="56">
+    <div class="p_name">56 <span class="light_text2">/ m<small>c</small>guire, james</span></div>
+    <div class="roster_line_2"><div class="p_pos">ls</div><div class="p_height">6'1''</div><div class="p_grade">jr</div><div class="p_weight">214</div></div>
+</div>
+
+<div class="rosterlist 57" id="57">
+    <div class="p_name">57 <span class="light_text2">/ meador, jake</span></div>
+    <div class="roster_line_2"><div class="p_pos">ol</div><div class="p_height">6'7''</div><div class="p_grade">fr</div><div class="p_weight">342</div></div>
+</div>
+
+<div class="rosterlist 90" id="90">
+    <div class="p_name">90 <span class="light_text2">/ meyer, drew</span></div>
+    <div class="roster_line_2"><div class="p_pos">p</div><div class="p_height">6'2''</div><div class="p_grade">so</div><div class="p_weight">182</div></div>
+</div>
+
+<div class="rosterlist 26" id="26">
+    <div class="p_name">26 <span class="light_text2">/ mitchell, reggie</span></div>
+    <div class="roster_line_2"><div class="p_pos">db</div><div class="p_height">6'0''</div><div class="p_grade">fr</div><div class="p_weight">183</div></div>
+</div>
+
+<div class="rosterlist 92" id="92">
+    <div class="p_name">92 <span class="light_text2">/ muldoon, pat</span></div>
+    <div class="roster_line_2"><div class="p_pos">dl</div><div class="p_height">6'3''</div><div class="p_grade">sr</div><div class="p_weight">258</div></div>
+</div>
+
+
+
+<!--+5-->
+
+<div class="rosterlist 28" id="28">
+    <div class="p_name">28 <span class="light_text2">/ musso, leo</span></div>
+    <div class="roster_line_2"><div class="p_pos">db</div><div class="p_height">5'10''</div><div class="p_grade">fr</div><div class="p_weight">195</div></div>
+</div>
+
+<div class="rosterlist 91" id="91">
+    <div class="p_name">91 <span class="light_text2">/ nethery, brett</span></div>
+    <div class="roster_line_2"><div class="p_pos">p</div><div class="p_height">6'2''</div><div class="p_grade">fr</div><div class="p_weight">195</div></div>
+</div>
+
+<div class="rosterlist 58" id="58">
+    <div class="p_name">58 <span class="light_text2">/ ninneman, jacob</span></div>
+    <div class="roster_line_2"><div class="p_pos">ol</div><div class="p_height">6'1''</div><div class="p_grade">jr</div><div class="p_weight">280</div></div>
+</div>
+
+<div class="rosterlist 06" id="06">
+    <div class="p_name">06 <span class="light_text2">/ o'brien, danny</span></div>
+    <div class="roster_line_2"><div class="p_pos">qb</div><div class="p_height">6'3''</div><div class="p_grade">sr</div><div class="p_weight">224</div></div>
+</div>
+
+<div class="rosterlist 13">
+    <div class="p_name">13 <span class="light_text2">/ o'neill, conor</span></div>
+    <div class="roster_line_2"><div class="p_pos">lb</div><div class="p_height">6'0''</div><div class="p_grade">sr</div><div class="p_weight">222</div></div>
+</div>
+
+
+
+<!--+5-->
+
+<div class="rosterlist 18" id="18">
+    <div class="p_name">18 <span class="light_text2">/ ogunbowale, dare</span></div>
+    <div class="roster_line_2"><div class="p_pos">db</div><div class="p_height">5'11''</div><div class="p_grade">fr</div><div class="p_weight">186</div></div>
+</div>
+
+<div class="rosterlist 48" id="48">
+    <div class="p_name">48 <span class="light_text2">/ pedersen, jacob</span></div>
+    <div class="roster_line_2"><div class="p_pos">te</div><div class="p_height">6'4''</div><div class="p_grade">sr</div><div class="p_weight">241</div></div>
+</div>
+
+<div class="rosterlist 10" id="10">
+    <div class="p_name">10 <span class="light_text2">/ phillips, curt</span></div>
+    <div class="roster_line_2"><div class="p_pos">qb</div><div class="p_height">6'3''</div><div class="p_grade">sr</div><div class="p_weight">215</div></div>
+</div>
+
+<div class="rosterlist 23" id="23">
+    <div class="p_name">23 <span class="light_text2">/ ponio, jerry</span></div>
+    <div class="roster_line_2"><div class="p_pos">db</div><div class="p_height">6'1''</div><div class="p_grade">sr</div><div class="p_weight">198</div></div>
+</div>
+
+<div class="rosterlist 46" id="46">
+    <div class="p_name">46 <span class="light_text2">/ rademacher, jake</span></div>
+    <div class="roster_line_2"><div class="p_pos">lb</div><div class="p_height">6'2''</div><div class="p_grade">fr</div><div class="p_weight">233</div></div>
+</div>
+
+
+
+<!--+5-->
+
+<div class="rosterlist 57" id="57">
+    <div class="p_name">57 <span class="light_text2">/ ruechel, ben</span></div>
+    <div class="roster_line_2"><div class="p_pos">lb</div><div class="p_height">6'1''</div><div class="p_grade">jr</div><div class="p_weight">226</div></div>
+</div>
+
+<div class="rosterlist 17" id="17">
+    <div class="p_name">17 <span class="light_text2">/ russell, jack</span></div>
+    <div class="roster_line_2"><div class="p_pos">k</div><div class="p_height">6'0''</div><div class="p_grade">so</div><div class="p_weight">172</div></div>
+</div>
+
+<div class="rosterlist 98" id="98">
+    <div class="p_name">98 <span class="light_text2">/ salata, stephen</span></div>
+    <div class="roster_line_2"><div class="p_pos">k</div><div class="p_height">6'1''</div><div class="p_grade">so</div><div class="p_weight">197</div></div>
+</div>
+
+<div class="rosterlist 12" id="12">
+    <div class="p_name">12 <span class="light_text2">/ salerno, matt</span></div>
+    <div class="roster_line_2"><div class="p_pos">p</div><div class="p_height">6'2''</div><div class="p_grade">fr</div><div class="p_weight">193</div></div>
+</div>
+
+<div class="rosterlist 94" id="94">
+    <div class="p_name">94 <span class="light_text2">/ schmidt, logan</span></div>
+    <div class="roster_line_2"><div class="p_pos">dl</div><div class="p_height">6'5''</div><div class="p_grade">fr</div><div class="p_weight">273</div></div>
+</div>
+
+
+
+<!--+5-->
+
+<div class="rosterlist 42" id="42">
+    <div class="p_name">42 <span class="light_text2">/ schobert, joe</span></div>
+    <div class="roster_line_2"><div class="p_pos">db</div><div class="p_height">6'2''</div><div class="p_grade">so</div><div class="p_weight">223</div></div>
+</div>
+
+<div class="rosterlist 22" id="22">
+    <div class="p_name">22 <span class="light_text2">/ shelton, sojourn</span></div>
+    <div class="roster_line_2"><div class="p_pos">db</div><div class="p_height">5'9''</div><div class="p_grade">fr</div><div class="p_weight">162</div></div>
+</div>
+
+<div class="rosterlist 12" id="12">
+    <div class="p_name">12 <span class="light_text2">/ southward, dezmen</span></div>
+    <div class="roster_line_2"><div class="p_pos">db</div><div class="p_height">6'2''</div><div class="p_grade">sr</div><div class="p_weight">214</div></div>
+</div>
+
+<div class="rosterlist 02" id="02">
+    <div class="p_name">02 <span class="light_text2">/ stave, joel</span></div>
+    <div class="roster_line_2"><div class="p_pos">qb</div><div class="p_height">6'5''</div><div class="p_grade">so</div><div class="p_weight">227</div></div>
+</div>
+
+<div class="rosterlist 38" id="38">
+    <div class="p_name">38 <span class="light_text2">/ steffes, eric</span></div>
+    <div class="roster_line_2"><div class="p_pos">te</div><div class="p_height">6'3''</div><div class="p_grade">fr</div><div class="p_weight">254</div></div>
+</div>
+
+
+
+<!--+5-->
+
+<div class="rosterlist 82" id="82">
+    <div class="p_name">82 <span class="light_text2">/ stengel, jake</span></div>
+    <div class="roster_line_2"><div class="p_pos">wr</div><div class="p_height">6'3''</div><div class="p_grade">so</div><div class="p_weight">198</div></div>
+</div>
+
+<div class="rosterlist 26" id="26">
+    <div class="p_name">26 <span class="light_text2">/ straus, derek</span></div>
+    <div class="roster_line_2"><div class="p_pos">rb</div><div class="p_height">6'0''</div><div class="p_grade">so</div><div class="p_weight">234</div></div>
+</div>
+
+<div class="rosterlist 46" id="46">
+    <div class="p_name">46 <span class="light_text2">/ traylor, austin</span></div>
+    <div class="roster_line_2"><div class="p_pos">te</div><div class="p_height">6'3''</div><div class="p_grade">so</div><div class="p_weight">243</div></div>
+</div>
+
+<div class="rosterlist 59" id="59">
+    <div class="p_name">59 <span class="light_text2">/ trotter, marcus</span></div>
+    <div class="roster_line_2"><div class="p_pos">lb</div><div class="p_height">6'0''</div><div class="p_grade">js</div><div class="p_weight">236</div></div>
+</div>
+
+<div class="rosterlist 43" id="43">
+    <div class="p_name">43 <span class="light_text2">/ trotter, michael</span></div>
+    <div class="roster_line_2"><div class="p_pos">de</div><div class="p_height">6'0''</div><div class="p_grade">js</div><div class="p_weight">210</div></div>
+</div>
+
+
+
+
+<!--+5-->
+
+<div class="rosterlist 60" id="60">
+    <div class="p_name">60 <span class="light_text2">/ udelhoven, connor</span></div>
+    <div class="roster_line_2"><div class="p_pos">ls</div><div class="p_height">6'0''</div><div class="p_grade">fr</div><div class="p_weight">223</div></div>
+</div>
+
+<div class="rosterlist 70" id="70">
+    <div class="p_name">70 <span class="light_text2">/ voltz, dan</span></div>
+    <div class="roster_line_2"><div class="p_pos">ol</div><div class="p_height">6'4''</div><div class="p_grade">fr</div><div class="p_weight">310</div></div>
+</div>
+
+<div class="rosterlist 42" id="42">
+    <div class="p_name">42 <span class="light_text2">/ walker, alex</span></div>
+    <div class="roster_line_2"><div class="p_pos">te</div><div class="p_height">6'5''</div><div class="p_grade">fr</div><div class="p_weight">232</div></div>
+</div>
+
+<div class="rosterlist 34" id="34">
+    <div class="p_name">34 <span class="light_text2">/ watt, derek</span></div>
+    <div class="roster_line_2"><div class="p_pos">fb</div><div class="p_height">6'2''</div><div class="p_grade">so</div><div class="p_weight">230</div></div>
+</div>
+
+<div class="rosterlist 20" id="20">
+    <div class="p_name">20 <span class="light_text2">/ white, james</span></div>
+    <div class="roster_line_2"><div class="p_pos">rb</div><div class="p_height">5'10''</div><div class="p_grade">sr</div><div class="p_weight">197</div></div>
+</div>
+
+
+
+
+<!--+5-->
+
+<div class="rosterlist 08" id="08">
+    <div class="p_name">08 <span class="light_text2">/ williams, isaiah</span></div>
+    <div class="roster_line_2"><div class="p_pos">db</div><div class="p_height">6'1''</div><div class="p_grade">jr</div><div class="p_weight">201</div></div>
+</div>
+
+<div class="rosterlist 62" id="62">
+    <div class="p_name">62 <span class="light_text2">/ williams, walker</span></div>
+    <div class="roster_line_2"><div class="p_pos">ol</div><div class="p_height">6'7''</div><div class="p_grade">fr</div><div class="p_weight">318</div></div>
+</div>
+
+<div class="rosterlist 85" id="85">
+    <div class="p_name">85 <span class="light_text2">/ wozniak, brian</span></div>
+    <div class="roster_line_2"><div class="p_pos">te</div><div class="p_height">6'4''</div><div class="p_grade">sr</div><div class="p_weight">257</div></div>
+</div>
+
+<div class="rosterlist 91" id="91">
+    <div class="p_name">91 <span class="light_text2">/ zagzebski, konrad</span></div>
+    <div class="roster_line_2"><div class="p_pos">dl</div><div class="p_height">6'3''</div><div class="p_grade">jr</div><div class="p_weight">271</div></div>
+</div>
+
+<div class="rosterlist 27" id="27">
+    <div class="p_name">27 <span class="light_text2">/ zuleger, kyle</span></div>
+    <div class="roster_line_2"><div class="p_pos">db</div><div class="p_height">5'11''</div><div class="p_grade">sr</div><div class="p_weight">188</div></div>
+</div>
+
+
+<div style="height:26px; width:100%; position:absolute; bottom:-5px;"></div>

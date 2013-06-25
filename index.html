@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UW Gametime</title>
+
+
+    <!-- CSS references -->
+    <link href="css/main.css" rel="stylesheet" />                               <!-- Main CSS -->
+    <link href="css/jquery.mobile.structure-1.3.1.min.css" rel="stylesheet" />  <!-- JQuery Mobile CSS -->
+    <link href="css/font-awesome.min.css" rel="stylesheet" />                   <!-- Font Awesome -->
+    
+    <!-- Javascript references -->
+    <script src="js/jquery-1.10.1.min.js"></script>                             <!-- Jquery -->                      
+    <script src="js/jquery.mobile-1.3.1.min.js"></script>                       <!-- Jquery Mobile -->
+    <script src="js/jquery.transit.min.js"></script>                            <!-- Transmit JS (CSS3 Animations) -->
+    <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>  <!-- Phonegap Ref (For API - no actual file) -->
+
+
+    <!-- Javascript -->
+    <script> 
+        
+        document.addEventListener("deviceready", onDeviceReady, false); 
+        
+        function onDeviceReady() {
+            document.addEventListener("backbutton", onBackKeyDown, false);  
+        }
+        
+        function onBackKeyDown() {                                          
+            if($("#side_menu_darken").is(":visible")){
+                $('#side_menu').css({ transformOrigin: '0px 0px' }).transition({ scale: [0.0, 1]}, 500);
+                $('#side_menu_darken').fadeOut(500);
+                $('.actionbtn').animate({ marginLeft: '-5px'}, 500);
+            }else if($("#home").is(":hidden")){
+                $('#home').show(0);
+                $('#schedule').hide(0);
+                $('#roster').hide(0);
+                $('#info').hide(0);
+                $('.rosterlist').show(0);
+                $('#stadium_map').hide(0);
+                $('.rosterlist').show(0);
+            }else{
+                navigator.app.exitApp();   
+            }
+                                    
+        }
+        
+      
+       
+    $(document).ready(function() { 
+
+            $('#schedule').hide(0); 
+            $('#roster').hide(0);
+            $('#number_input').val('');
+            $('#info').hide(0);
+            $('#stadium_map').hide(0);
+            $('#side_menu').transition({ scale: [0.0, 1]}, 5);
+        
+        
+        //TAPS ON TOP AND ICON
+            $('.action_header').on( 'tap', checkside );    
+            $('#menubtn').on( 'tap', checkside );           
+            function checkside(){
+                if($("#side_menu_darken").is(":visible")){
+                    hidesideMenu();
+                }else{
+                    showsideMenu();   
+                }
+            }
+                        
+        
+        
+        // SHOW SIDE MENU
+            $('#actionbar').on( 'swiperight', showsideMenu );       
+            $('.contentwrapper').on( 'swiperight', showsideMenu ); 
+            $('.action_header').on( 'swiperight', showsideMenu );   
+            function showsideMenu(event){
+                $('#side_menu').css({ transformOrigin: '0px 0px' }).transition({ scale: [1, 1]}, 500);
+                $('#side_menu_darken').fadeIn(500); 
+                $('.actionbtn').animate({ marginLeft: '-11px'}, 500);
+            }
+        
+        
+        //HIDE  SIDE MENU
+            $('#side_menu_darken').on( 'swipeleft', hidesideMenu ); 
+            $('#side_menu_darken').on( 'tap', hidesideMenu );
+            $('.action_header').on( 'swipeleft', hidesideMenu );
+            $('#side_menu').on( 'swipeleft', hidesideMenu );
+            $('#actionbar').on( 'swipeleft', hidesideMenu );
+            function hidesideMenu(event){
+                $('#side_menu').css({ transformOrigin: '0px 0px' }).transition({ scale: [0.0, 1]}, 500); 
+                $('#side_menu_darken').fadeOut(500); 
+                $('.actionbtn').animate({ marginLeft: '-5px'}, 500); 
+            }
+ 
+            
+        //SCHEDULE BUTTONS
+            $('#schedulebtn_side').on( 'tap', scheduleTap );
+            $('#schedulebtn').on( 'tap', scheduleTap );
+            function scheduleTap( event ) {
+                $('#home').hide(0);
+                $('#info').hide(0);
+                $('#roster').hide(0);
+                $('#schedule').show(0);
+                $('#side_menu').css({ transformOrigin: '0px 0px' }).transition({ scale: [0.0, 1]}, 500);
+                $('#side_menu_darken').fadeOut(400);
+                $('.actionbtn').animate({ marginLeft: '-5px'}, 500);
+            }
+        
+        
+        //ROSTER BUTTONS
+            $('#rosterbtn').on( 'tap', rosterTap ); 
+            $('#rosterbtn_side').on( 'tap', rosterTap );
+            function rosterTap( event ) {
+                $('#home').hide(0);
+                $('#roster').show(0);
+                $('#schedule').hide(0);
+                $('#info').hide(0);
+                $('#side_menu').css({ transformOrigin: '0px 0px' }).transition({ scale: [0.0, 1]}, 500);
+                $('#side_menu_darken').fadeOut(500);
+                $('.actionbtn').animate({ marginLeft: '-5px'}, 500);
+                $('.rosterlist').show(0);
+                $('#number_input').val('');
+            }
+        
+            
+        //INFO BUTTONS    
+            $('#infobtn').on( 'tap', infoTap ); 
+            $('#infobtn_side').on( 'tap', infoTap );
+            function infoTap( event ) {
+                $('#home').hide(0);
+                $('#info').show(0);
+                $('#roster').hide(0);
+                $('#schedule').hide(0);
+                $('#side_menu').css({ transformOrigin: '0px 0px' }).transition({ scale: [0.0, 1]}, 500);
+                $('#side_menu_darken').fadeOut(500);
+                $('.actionbtn').animate({ marginLeft: '-5px'}, 500);
+            }
+        
+
+            $('#show_stadium_btn').on( 'tap', stadiummapTap ); 
+            function stadiummapTap( event ) {
+                $('#stadium_map').toggle(250);
+            }
+        
+ 
+    });
+    </script>
+
+
+
+</head>
+    <body>
+        
+        <!-- Action bar -->                    
+        <div id="actionbar">
+            <img src="images/icons/threelines.png" class="actionbtn" id="menubtn">
+            <div class="action_header">Badger Sports</div>
+        </div>
+        
+        <!-- Side Menu -->
+        <div id="side_menu">
+            <div class="side_menu_header" style="margin-top:54px">Football</div>
+            <div class="side_menu_item" id="schedulebtn_side">Schedule</div>
+            <div class="side_menu_item" id="rosterbtn_side">Roster</div>
+            <div class="side_menu_item" id="infobtn_side">Info</div>
+        </div>
+        <!-- Dark background when side menu comes out -->
+        <div id="side_menu_darken"></div>
+            
+            
+        
+        
+        <!-- Home page -->
+        <div class="contentwrapper" id="home" style="z-index:100;">
+            
+            <div id="btnwrapper">
+                <div class="innerwrapper" style="margin-top:0px;" id="schedulebtn">
+                    <div class="leftimgbox"><i class="icon-calendar"></i></div>
+                    <div class="boxbtntext">&nbsp;&nbsp;&nbsp;Schedule</div>
+                </div>
+                
+                <div class="innerwrapper" id="rosterbtn">
+                    <div class="leftimgbox"><i class="icon-list"></i></div>
+                    <div class="boxbtntext">&nbsp;&nbsp;&nbsp;Roster</div>
+                </div>
+                
+                <div class="innerwrapper" id="infobtn">
+                    <div class="leftimgbox"><i class="icon-info-sign"></i></div>
+                    <div class="boxbtntext">&nbsp;&nbsp;&nbsp;Info</div>
+                </div>
+            </div>
+            
+            <div class="footer">Developed at <a href="#" target="_blank">StudioNice.co</a> by a UW student</div>
+            
+        </div>
+        
+        
+        
+        
+        <!-- Schedule Page -->
+        <div class="contentwrapper" id="schedule" style="z-index:0;">
+            
+            <div class="upcoming" style="margin-top:64px;" id="umass">
+                <div class="schedule_top">Aug. 31<span class="light_text"> / 11:00<small>AM</small></span></div>
+                <div class="opponent"><small>VS.</small> UMASS</div>
+                <div class="schedule_btm">&nbsp;<i class="icon-map-marker"></i> Camp Randall Stadium</div>
+                <div class="schedule_btm"><small><i class="icon-desktop"></i></small> Big Ten Network</div>
+            </div>
+            
+            <div class="upcoming" id="tntech">
+                <div class="schedule_top">Sept. 7<span class="light_text"> / 11:00<small>AM</small></span></div>
+                <div class="opponent"><small>VS.</small> Tennessee Tech</div>
+                <div class="schedule_btm">&nbsp;<i class="icon-map-marker"></i> Camp Randall Stadium</div>
+                <div class="schedule_btm"><small><i class="icon-desktop"></i></small> Big Ten Network</div>
+            </div>
+            
+            <div class="upcoming" id="azstate">
+                <div class="schedule_top">Sept. 14<span class="light_text"> / 9:30<small>PM</small></span></div>
+                <div class="opponent"><small>@</small> Arizona State</div>
+                <div class="schedule_btm">&nbsp;<i class="icon-map-marker"></i> Sun Devil Stadium</div>
+                <div class="schedule_btm"><small><i class="icon-desktop"></i></small> ESPN/ESPN2</div>
+            </div>
+            
+            <div class="upcoming" id="purdue">
+                <div class="schedule_top">Sept. 21<span class="light_text"> / TBA<small></small></span></div>
+                <div class="opponent"><small>VS.</small> Purdue</div>
+                <div class="schedule_btm">&nbsp;<i class="icon-map-marker"></i> Camp Randall Stadium</div>
+                <div class="schedule_btm"><small><i class="icon-desktop"></i></small> TBA</div>
+            </div>
+            
+            <div class="upcoming" id="ohiostate">
+                <div class="schedule_top">Sept. 28<span class="light_text"> / 7:00<small>PM</small></span></div>
+                <div class="opponent"><small>@</small> Ohio State</div>
+                <div class="schedule_btm">&nbsp;<i class="icon-map-marker"></i> Ohio Stadium</div>
+                <div class="schedule_btm"><small><i class="icon-desktop"></i></small> ABC/ESPN/ESPN2</div>
+            </div>
+            
+            <div class="upcoming" id="nwst">
+                <div class="schedule_top">Oct. 12<span class="light_text"> / 2:30<small>PM</small></span></div>
+                <div class="opponent"><small>VS.</small> Northwestern</div>
+                <div class="schedule_btm">&nbsp;<i class="icon-map-marker"></i> Camp Randall Stadium</div>
+                <div class="schedule_btm"><small><i class="icon-desktop"></i></small> TBA</div>
+            </div>
+            
+            <div class="upcoming" id="ill">
+                <div class="schedule_top">Oct. 19<span class="light_text"> / 7:00<small>PM</small></span></div>
+                <div class="opponent"><small>@</small> Illinois</div>
+                <div class="schedule_btm">&nbsp;<i class="icon-map-marker"></i> Memorial Stadium</div>
+                <div class="schedule_btm"><small><i class="icon-desktop"></i></small> Big Ten Network</div>
+            </div>
+            
+            <div class="upcoming" id="iowa">
+                <div class="schedule_top">Nov. 2<span class="light_text"> / TBA<small></small></span></div>
+                <div class="opponent"><small>@</small> Iowa</div>
+                <div class="schedule_btm">&nbsp;<i class="icon-map-marker"></i> Kinnick Stadium</div>
+                <div class="schedule_btm"><small><i class="icon-desktop"></i></small> TBA</div>
+            </div>
+            
+            <div class="upcoming" id="byu">
+                <div class="schedule_top">Nov. 9<span class="light_text"> / TBA<small></small></span></div>
+                <div class="opponent"><small>VS.</small> BYU</div>
+                <div class="schedule_btm">&nbsp;<i class="icon-map-marker"></i> Camp Randall Stadium</div>
+                <div class="schedule_btm"><small><i class="icon-desktop"></i></small> TBA</div>
+            </div>
+            
+            <div class="upcoming" id="indiana">
+                <div class="schedule_top">Nov. 16<span class="light_text"> / TBA<small></small></span></div>
+                <div class="opponent"><small>VS.</small> Indiana</div>
+                <div class="schedule_btm">&nbsp;<i class="icon-map-marker"></i> Camp Randall Stadium</div>
+                <div class="schedule_btm"><small><i class="icon-desktop"></i></small> TBA</div>
+            </div>
+            
+            <div class="upcoming" id="minn">
+                <div class="schedule_top">Nov. 23<span class="light_text"> / TBA<small></small></span></div>
+                <div class="opponent"><small>@</small> Minnesota</div>
+                <div class="schedule_btm">&nbsp;<i class="icon-map-marker"></i> TCF Bank Stadium</div>
+                <div class="schedule_btm"><small><i class="icon-desktop"></i></small> TBA</div>
+            </div>
+            
+            <div class="upcoming" id="penn">
+                <div class="schedule_top">Nov. 30<span class="light_text"> / TBA<small></small></span></div>
+                <div class="opponent"><small>VS.</small> Penn State</div>
+                <div class="schedule_btm">&nbsp;<i class="icon-map-marker"></i> Camp Randall Stadium</div>
+                <div class="schedule_btm"><small><i class="icon-desktop"></i></small> TBA</div>
+            </div>
+            
+            <div class="upcoming" id="bigten">
+                <div class="schedule_top">Dec. 7<span class="light_text"> / TBA<small></small></span></div>
+                <div class="opponent"><small>VS.</small> BIG10 Championship</div>
+                <div class="schedule_btm">&nbsp;<i class="icon-map-marker"></i> Camp Randall Stadium</div>
+                <div class="schedule_btm"><small><i class="icon-desktop"></i></small> TBA</div>
+            </div>
+            
+            
+            <div style="height:26px; width:100%;"></div>
+
+        </div>
+        
+
+        
+        
+
+        
+        <!-- Roster Page -->
+        <div class="contentwrapper" id="roster" style="z-index:0; background-image:url(images/no_results.png); background-position:center 140px; background-repeat:no-repeat; background-size:100px 15px;">
+            
+            <!-- I wanted the roster to be easily editable, so I have it in another file and I get the content of that file and place it here with the js below-->
+            <div id="rostercontent">
+                <script type="text/javascript">
+                    $(function(){
+                        $("#rostercontent").load("roster.html");
+                    });
+                </script>
+            </div>
+            
+        </div>
+        
+        
+        
+        
+        
+        <!-- Info Page -->
+        <div class="contentwrapper" id="info" style="z-index:0;">
+            
+            <div class="infobox" id="show_stadium_btn" style="margin-top:64px;">
+                <div class="info_header" style="margin-bottom:7px;"><i class="icon-trophy"></i> Stadium Map<i class="icon-collapse collapser" id="col1"></i></div>
+                <img src="images/stadium_map.png" style="width:100%;" id="stadium_map">
+            </div>
+            
+            <!--<div class="infobox hoverer">
+                <div class="info_header" style="margin-bottom:7px;"><i class="icon-map-marker"></i> City Map<i class="icon-collapse collapser" id="col2"></i></div>
+            </div>-->
+            
+            <div class="infobox">
+                <div class="info_header"><i class="icon-android"></i> App Info</div>
+                <div class="actual_info">
+                    <br/>
+                    <i class="icon-code"></i> This app was developed at <a href='#' class='link' rel=''>StudioNice</a> by a UW Student. Check out www.Studionice.co.
+                    <br/><br/>
+                    <i class="icon-ban-circle"></i> This is in no way associated with, or endorsed by, the University of Wisconsin - Madison.
+                    <br/><br/>
+                    <i class="icon-lightbulb"></i> I need more ideas for this app. If you have one, click the button below to email me.
+                </div>
+                
+            </div>
+            
+            <div style="height:120px; width:100%;"></div>
+            <a href="mailto:mitch@mitchs.co" class="link emailbtn" rel="mailto:mitch@mitchs.co">MITCH@MITCHS.CO</a>
+            
+        </div>
+        
+
+    </body>
+</html>

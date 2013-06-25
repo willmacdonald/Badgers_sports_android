@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "co.studionice.wisco"
+        version   = "1.0.65">
+
+
+    <name>BadgerSports 2013</name>
+
+    <description>
+        An app for the ultimate badger fan 
+    </description>
+
+    <author href="https://studionice.co" email="mitch@mitchs.co">
+        Studio Nice
+    </author>
+        
+    <preference name="phonegap-version" value="2.7.0" />
+        
+    <preference name="orientation" value="portrait" />
+    
+    <preference name="splash-screen-duration" value="4500" />
+        
+    <icon src="images/icons/ldpi.png" gap:platform="android" gap:density="ldpi" />
+    <icon src="images/icons/mdpi.png" gap:platform="android" gap:density="mdpi" />
+    <icon src="images/icons/hdpi.png" gap:platform="android" gap:density="hdpi" />
+    <icon src="images/icons/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
+    
+    <preference name="permissions" value="none"/>
+        
+    <preference name="stay-in-webview" value="false" />
+        
+        
+    <gap:splash src="images/splash.png" />
+        
+    <preference name="android-minSdkVersion" value="5" />
+
+</widget>
